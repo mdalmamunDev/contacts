@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/include3"
+        layout="@layout/main_tool_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_60"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include3" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:visibility="gone"
+        android:id="@+id/main_SelectionActionsCon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#B9ADD2FF"
+        android:gravity="center"
+        android:layout_marginHorizontal="@dimen/dp_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/recyclerView">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/main_selectAllBtn"
+            android:layout_width="@dimen/dp_42"
+            android:layout_height="@dimen/dp_42"
+            android:src="@drawable/baseline_check_box_outline_blank_24"
+            android:backgroundTint="@color/trans"/>
+        <TextView
+            android:id="@+id/main_selectCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_min_5"
+            android:layout_marginEnd="@dimen/dp_20"
+            style="@style/text_normal"
+            android:text="@string/def_contact_count"
+            android:textColor="@color/blue_dark"
+            android:textStyle="bold"/>
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/main_btnSelectDelete"
+            android:layout_width="@dimen/dp_42"
+            android:layout_height="@dimen/dp_42"
+            android:src="@drawable/baseline_delete_all_24"
+            android:backgroundTint="@color/trans"/>
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/main_btnSelectExport"
+            android:layout_width="@dimen/dp_42"
+            android:layout_height="@dimen/dp_42"
+            android:src="@drawable/baseline_export_24"
+            android:backgroundTint="@color/trans"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/main_loader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#000073FF"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loader" />
+
+    <ImageButton
+        android:id="@+id/btn_add"
+        style="@style/btn_large"
+        android:layout_marginEnd="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:background="@drawable/def_btn_bg"
+        android:src="@drawable/baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/add_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

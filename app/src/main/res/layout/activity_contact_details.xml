@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/details_main_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ContactDetails">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/details_tool_bar" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?android:attr/actionBarSize"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include2">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp_80"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include2">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/details_def_imageView"
+                style="@style/btn_largeX"
+                android:layout_margin="@dimen/dp_32"
+                android:background="@drawable/def_btn_bg"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/def_contact_img"
+                android:elevation="@dimen/dp_10"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/details_imageView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_270"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/aaaaaaaaaaaaaaaaaaaaa"
+                android:visibility="gone"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginHorizontal="@dimen/dp_10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/details_name"
+                    style="@style/text_large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contact_name" />
+
+                <TextView
+                    android:id="@+id/details_company"
+                    style="@style/text_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/def_company"
+                    android:visibility="gone"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/details_actions_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stroke_top"
+                android:orientation="vertical"
+                android:paddingVertical="@dimen/dp_7">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/stroke_bottom">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/details_btn_call"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp_14"
+                        android:background="@drawable/button_on_press"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            style="@style/btn_small"
+                            android:src="@drawable/baseline_phone_24" />
+
+                        <TextView
+                            style="@style/text_normal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/call"
+                            android:textColor="@color/blue" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/details_btn_msg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp_14"
+                        android:background="@drawable/button_on_press"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            style="@style/btn_small"
+                            android:src="@drawable/baseline_message_24" />
+
+                        <TextView
+                            style="@style/text_normal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/message"
+                            android:textColor="@color/blue" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/detail_btn_setUp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp_14"
+                        android:background="@drawable/button_on_press"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            style="@style/btn_small"
+                            android:src="@drawable/baseline_set_up_24" />
+
+                        <TextView
+                            style="@style/text_normal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/set_up"
+                            android:textColor="@color/blue" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/details_btn_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp_14"
+                        android:background="@drawable/button_on_press"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/detail_btn_email"
+                            style="@style/btn_small"
+                            android:src="@drawable/baseline_mail_24" />
+
+                        <TextView
+                            style="@style/text_normal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/email"
+                            android:textColor="@color/blue" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/list_area_phones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/stroke_bottom"
+                    android:padding="@dimen/dp_14"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        tools:ignore="RelativeOverlap,RtlSymmetry">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            style="@style/btn_small"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:src="@drawable/baseline_phone_24_d" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/details_phones_con"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_3"
+                            android:orientation="vertical">
+
+                            <!--         phones list           -->
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/list_area_emails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/stroke_bottom"
+                    android:padding="@dimen/dp_14"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        tools:ignore="RelativeOverlap,RtlSymmetry">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            style="@style/btn_small"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:src="@drawable/baseline_mail_24_d" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/details_emails_con"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_3"
+                            android:orientation="vertical">
+
+                            <!--         emails list view           -->
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/details_btn_edit"
+        style="@style/btn_large"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/def_btn_bg"
+        android:contentDescription="@string/add_button"
+        android:src="@drawable/baseline_edit_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/details_loader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#000073FF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loader"
+        android:visibility="gone"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

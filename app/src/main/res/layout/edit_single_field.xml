@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_15">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        style="@style/edit_field_middle">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_input_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_4"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/label">
+            <AutoCompleteTextView
+                android:id="@+id/spinner_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/dp_150"
+                android:inputType="none"
+                tools:ignore="LabelFor" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat> <!-- middle_con ends -->
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        style="@style/edit_field_icon_con">
+        <androidx.appcompat.widget.AppCompatImageView
+            style="@style/edit_field_icon"
+            android:layout_margin="@dimen/dp_5"/>
+        <!--    Right icon if needed   -->
+    </androidx.appcompat.widget.LinearLayoutCompat> <!-- right_con ends -->
+
+</androidx.appcompat.widget.LinearLayoutCompat><!-- edit_field_con ends -->

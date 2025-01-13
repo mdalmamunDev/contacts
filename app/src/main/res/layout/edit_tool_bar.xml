@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:backgroundTint="@color/def_bg_color">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/edit_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:gravity="center_vertical"
+                tools:ignore="RelativeOverlap">
+
+                <ImageButton
+                    android:id="@+id/edit_btn_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:layout_marginStart="@dimen/dp_min_5"
+                    android:backgroundTint="@color/def_bg_color"
+                    android:src="@drawable/baseline_cross"
+                    android:contentDescription="@string/cancel_btn" />
+                <TextView
+                    android:id="@+id/edit_tool_bar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit_contact"
+                    style="@style/text_largeX"
+                    android:layout_marginStart="@dimen/dp_9"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/edit_btn_save"
+                style="@style/text_normal"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_40"
+                android:background="@drawable/button_on_press"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:textAllCaps="false"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/dp_7"
+                android:text="@string/save"
+                android:textColor="@color/blue"
+                tools:ignore="RelativeOverlap" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+</com.google.android.material.appbar.AppBarLayout>

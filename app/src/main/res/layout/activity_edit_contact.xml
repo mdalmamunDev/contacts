@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditContact">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/edit_tool_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/img_con"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dp_80"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                style="@style/btn_largeX"
+                android:layout_marginTop="@dimen/dp_45"
+                android:layout_marginBottom="@dimen/dp_45"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/edit_input_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/def_btn_bg"
+                    android:src="@drawable/baseline_add_a_photo_24"
+                    android:contentDescription="@string/add_take_image" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:visibility="gone"
+                    android:id="@+id/edit_img_edit_icon"
+                    style="@style/btn_smallX"
+                    android:src="@drawable/baseline_edit_24"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="@dimen/dp_5"
+                    android:elevation="@dimen/dp_2"/>
+
+            </RelativeLayout>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                style="@style/edit_field_con">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    style="@style/edit_field_icon_con">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/edit_field_icon"
+                        android:src="@drawable/def_contact_img_b"/>
+                </androidx.appcompat.widget.LinearLayoutCompat> <!-- left_con ends -->
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    style="@style/edit_field_middle">
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/firs_name">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_input_name_first"
+                            android:textColor="@color/def_txt_color"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:hint="@string/last_name">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_input_name_last"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/def_txt_color"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat> <!-- middle_con ends -->
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    style="@style/edit_field_icon_con">
+
+                         <!--         -->
+                </androidx.appcompat.widget.LinearLayoutCompat> <!-- right_con ends -->
+
+            </androidx.appcompat.widget.LinearLayoutCompat><!-- edit_field_con ends -->
+
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                style="@style/edit_field_con">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    style="@style/edit_field_icon_con">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/edit_field_icon"
+                        android:src="@drawable/baseline_company_24"/>
+                </androidx.appcompat.widget.LinearLayoutCompat> <!-- left_con ends -->
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    style="@style/edit_field_middle">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/company">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_input_company"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/def_txt_color"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat> <!-- middle_con ends -->
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    style="@style/edit_field_icon_con">
+                    <!--                    -->
+                </androidx.appcompat.widget.LinearLayoutCompat> <!-- right_con ends -->
+
+            </androidx.appcompat.widget.LinearLayoutCompat><!-- edit_field_con ends -->
+
+
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            style="@style/edit_field_con"
+            android:layout_marginTop="@dimen/dp_5">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                style="@style/edit_field_icon_con">
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/edit_field_icon"
+                    android:src="@drawable/baseline_phone_24_d"/>
+                <!--     left icon        -->
+            </androidx.appcompat.widget.LinearLayoutCompat> <!-- icon_con ends -->
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/phones_con"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--********* Phone Input Field *********-->
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat> <!-- phones_con ends -->
+
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                style="@style/edit_field_con"
+                android:layout_marginTop="@dimen/dp_5">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    style="@style/edit_field_icon_con">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/edit_field_icon"
+                        android:src="@drawable/baseline_mail_24_d"/>
+                    <!--     left icon        -->
+                </androidx.appcompat.widget.LinearLayoutCompat> <!-- icon_con ends -->
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/emails_con"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!--********* Phone Input Field *********-->
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat> <!-- emails_con ends -->
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
